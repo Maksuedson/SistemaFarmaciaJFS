@@ -23,17 +23,17 @@
 				<f:facet name="header">Lista Fornecedores</f:facet>
 
 
-				<p:column headerText="Código" sortBy="#{item.codigo}"
+				<p:column headerText="CÃ³digo" sortBy="#{item.codigo}"
 					filterBy="#{item.codigo}">
 					<h:outputText value="#{item.codigo}" />
 				</p:column>
 
-				<p:column headerText="Descrição" sortBy="#{item.descricao}"
+				<p:column headerText="DescriÃ§Ã£o" sortBy="#{item.descricao}"
 					filterBy="#{item.descricao}">
 					<h:outputText value="#{item.descricao}" />
 				</p:column>
 
-				<p:column headerText="Opções">
+				<p:column headerText="OpÃ§Ãµes">
 					<p:commandButton icon="ui-icon-trash"
 						oncomplete="PF('dlgforExcluir').show();"
 						update="frmforExcluir:pnforExcluir">
@@ -63,9 +63,9 @@
 			appendTo="@(Body)">
 			<h:form id="frmforNovo">
 				<h:panelGrid id="pnforNovo" columns="2">
-					<p:outputLabel value="Descrição:" />
+					<p:outputLabel value="DescriÃ§Ã£o:" />
 					<h:inputText size="30" maxlength="50"
-						value="#{MBFornecedores.fornecedores.descricao}" required="true" requiredMessage="O campo fornecedor é obrigatório"/>
+						value="#{MBFornecedores.fornecedores.descricao}" required="true" requiredMessage="O campo fornecedor Ã© obrigatÃ³rio" style="text-transform:uppercase;"/>
 				</h:panelGrid>
 				<h:panelGrid columns="2">
 					<p:commandButton value="Gravar"
@@ -84,10 +84,10 @@
 			appendTo="@(Body)">
 			<h:form id="frmforExcluir">
 				<h:panelGrid id="pnforExcluir" columns="2">
-					<p:outputLabel value="Código:" />
+					<p:outputLabel value="CÃ³digo:" />
 					<p:outputLabel value="#{MBFornecedores.fornecedores.codigo}" />
 
-					<p:outputLabel value="Descrição:" />
+					<p:outputLabel value="DescriÃ§Ã£o:" />
 					<p:outputLabel value="#{MBFornecedores.fornecedores.descricao}" />
 				</h:panelGrid>
 				<h:panelGrid columns="2">
@@ -109,10 +109,10 @@
 			appendTo="@(Body)">
 			<h:form id="frmforEditar">
 				<h:panelGrid id="pnforEditar" columns="2">
-					<p:outputLabel value="Código:" />
+					<p:outputLabel value="CÃ³digo:" />
 					<p:outputLabel value="#{MBFornecedores.fornecedores.codigo}" />
 
-					<p:outputLabel value="Descrição:" />
+					<p:outputLabel value="DescriÃ§Ã£o:" />
 					<p:inputText value="#{MBFornecedores.fornecedores.descricao}" />
 				</h:panelGrid>
 				<h:panelGrid columns="2">
