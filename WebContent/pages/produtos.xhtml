@@ -22,12 +22,12 @@
 
 				<f:facet name="header">Lista Produtos</f:facet>
 
-				<p:column headerText="Código" sortBy="#{item.codigo}"
+				<p:column headerText="CÃ³digo" sortBy="#{item.codigo}"
 					filterBy="#{item.codigo}">
 					<h:outputText value="#{item.codigo}" />
 				</p:column>
 
-				<p:column headerText="Descrição" sortBy="#{item.descricao}"
+				<p:column headerText="DescriÃ§Ã£o" sortBy="#{item.descricao}"
 					filterBy="#{item.descricao}">
 					<h:outputText value="#{item.descricao}" />
 				</p:column>
@@ -37,7 +37,7 @@
 					<h:outputText value="#{item.quantidade}" />
 				</p:column>
 
-				<p:column headerText="Preço" sortBy="#{item.preco}"
+				<p:column headerText="PreÃ§o" sortBy="#{item.preco}"
 					filterBy="#{item.preco}">
 					<h:outputText value="#{item.preco}" />
 				</p:column>
@@ -48,7 +48,7 @@
 					<h:outputText value="#{item.fornecedores.descricao}" />
 				</p:column>
 
-				<p:column headerText="Opções">
+				<p:column headerText="OpÃ§Ãµes">
 					<p:commandButton icon="ui-icon-trash"
 						oncomplete="PF('dlgproExcluir').show();"
 						update="frmproExcluir:pnproExcluir">
@@ -79,24 +79,24 @@
 			appendTo="@(Body)">
 			<h:form id="frmproNovo">
 				<h:panelGrid id="pnproNovo" columns="2">
-					<p:outputLabel value="Descrição:" />
+					<p:outputLabel value="DescriÃ§Ã£o:" />
 					<h:inputText size="30" maxlength="50"
 						value="#{MBProdutos.produtos.descricao}" required="true"
-						requiredMessage="O campo produto é obrigatório" />
+						requiredMessage="O campo produto Ã© obrigatÃ³rio" style="text-transform:uppercase;"/>
 
 					<p:outputLabel value="Qtd:" />
 					<h:inputText size="10" maxlength="50"
 						value="#{MBProdutos.produtos.quantidade}" required="true"
-						requiredMessage="O campo quantidade é obrigatório" />
+						requiredMessage="O campo quantidade Ã© obrigatÃ³rio" />
 
-					<p:outputLabel value="Preço" />
+					<p:outputLabel value="PreÃ§o" />
 					<h:inputText size="10" maxlength="50"
 						value="#{MBProdutos.produtos.preco}" required="true"
-						requiredMessage="O campo preço é obrigatório" />
+						requiredMessage="O campo preÃ§o Ã© obrigatÃ³rio" />
 
 					<p:outputLabel value="Fornecedores" />
 					<p:selectOneMenu value="#{MBProdutos.produtos.fornecedores.codigo}"
-						required="true" requiredMessage="O campo fornecedor é obrigatório" >
+						required="true" requiredMessage="O campo fornecedor Ã© obrigatÃ³rio" >
 						<f:selectItem itemValue="" itemLabel="Selecione um Fornecedor" />
 					<f:selectItems value="#{MBProdutos.comboFornecedores}" var="item"
 						itemValue="#{item.codigo}" itemLabel="#{item.descricao}">
@@ -123,16 +123,16 @@
 			appendTo="@(Body)">
 			<h:form id="frmproExcluir">
 				<h:panelGrid id="pnproExcluir" columns="2">
-					<p:outputLabel value="Código:" />
+					<p:outputLabel value="CÃ³digo:" />
 					<p:outputLabel value="#{MBProdutos.produtos.codigo}" />
 
-					<p:outputLabel value="Descrição:" />
+					<p:outputLabel value="DescriÃ§Ã£o:" />
 					<p:outputLabel value="#{MBProdutos.produtos.descricao}" />
 
 					<p:outputLabel value="Quantidade:" />
 					<p:outputLabel value="#{MBProdutos.produtos.quantidade}" />
 
-					<p:outputLabel value="Preço:" />
+					<p:outputLabel value="PreÃ§o:" />
 					<p:outputLabel value="#{MBProdutos.produtos.preco}" />
 
 					<p:outputLabel value="Fornecedor:" />
@@ -159,17 +159,17 @@
 			appendTo="@(Body)">
 			<h:form id="frmproEditar">
 				<h:panelGrid id="pnproEditar" columns="2">
-					<p:outputLabel value="Código:" />
+					<p:outputLabel value="CÃ³digo:" />
 					<p:outputLabel value="#{MBProdutos.produtos.codigo}" />
 
-					<p:outputLabel value="Descrição:" />
+					<p:outputLabel value="DescriÃ§Ã£o:" />
 					<p:inputText value="#{MBProdutos.produtos.descricao}" />
 
 					<p:outputLabel value="Quantidade:" />
 					<p:inputText value="#{MBProdutos.produtos.quantidade}" size="10"
 						maxlength="50" />
 
-					<p:outputLabel value="Preço:" />
+					<p:outputLabel value="PreÃ§o:" />
 					<p:inputText value="#{MBProdutos.produtos.preco}" size="10"
 						maxlength="50" />
 
